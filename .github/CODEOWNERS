@@ -32,13 +32,13 @@
 # anywhere in your repository.
 #apps/ @octocat
 
-# In this example, @peevees owns any file in the `/.github`
+# In this example, @assently/operations owns any file in the `/.github`
 # directory in the root of your repository.
-/.github/ @peevees
+ /.github/ @assently/operations
 
-# In this example, @peevees owns the file `/.editorconfig`
+# In this example, @assently/operations owns the file `/.editorconfig`
 # in the root of your repository.
-/.editorconfig @peevees
+ /.editorconfig @assently/operations
 
 ######## EXAMPLES END ############
 

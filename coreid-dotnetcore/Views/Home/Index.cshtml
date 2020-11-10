@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="text-center">
+    <p>
+        <img width="100px" height="200px" src="https://assently.com/wp-content/uploads/2018/04/logo_black.svg" data-src="https://assently.com/wp-content/uploads/2018/04/logo_black.svg" alt="Assently Logo">
+        <strong>CoreID</strong>
+    </p>
+
+    <h1>Welcome @(User.Identity.IsAuthenticated ? User.Identity.Name : "guest") </h1>
+
+    <p>This sample shows how you can use Assently CoreID in your ASP.NET Core application</p>
+
+    <a href="/Authentication/Login" class="btn btn-primary">Log in using CoreID</a>
+</div>
+
+<div class="text-center" style="margin-top: 15px;">
+    <p>Read the Getting started guide and API-documentation for <a href="https://docs.assently.com/">Assently CoreID</a>.</p>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

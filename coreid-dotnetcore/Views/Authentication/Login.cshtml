@@ -1,0 +1,87 @@
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Assently CoreID - Please log in";
+    Layout = "_Layout";
+}
+
+<script src="https://coreid-test.assently.com/embed/coreid.js"></script>
+
+<script type="application/javascript">
+    function hideError() {
+        $("#login-error").hide();
+    }
+        
+    function handleError(errorMessage, errorType) {
+        if (!errorMessage){}
+        else if (errorType === 'cancelled'){
+            $("#login-error").html("User closed dialog without logging in").show();
+        } else{
+            $("#login-error").html(errorMessage).show();
+        }
+    }
+
+    function openCoreId(){
+         coreid_client.init({
+            config: {
+                allowedEids: ['@string.Join("','", Model.AllowedIdProviders)'],  
+                mode: '@Model.Mode',       
+                language: '@Model.Language',    
+                provider: '@Model.DefaultProvider'
+            },
+            token: '@Model.Token',
+            callback: function (data) {
+                hideError();
+                if (data.success && data.token) {
+                    $.post("login", {
+                        returnUrl: '@Model.ReturnUrl',
+                        type: data.type,
+                        token: data.token,
+                        success: data.success,
+                        provider: data.provider,
+                        transactionId: data.transactionId,
+                        errorMessage: data.errorMessage
+                    }, function (result) {
+                        if (result.success) {
+                            window.location.href = result.redirectUrl;
+                        } else {
+                            handleError(result.errorMessage);
+                        }
+                    });
+                } else {
+                    handleError(data.errorMessage, data.type);
+                }
+            }
+        });
+         
+        coreid_client.start();
+    }
+</script>
+
+
+<div class="card text-center">
+    <div class="card-body">
+        <h5 class="card-title">
+            Log in using Assently CoreID
+        </h5>
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <p class="card-text">User is already logged in. </p>
+            <form asp-controller="Authentication" asp-action="Logout" method="post">
+                <p class="text-center">
+                    <button type="submit" class="btn btn-primary">Logout</button>
+                </p>
+            </form>
+        }
+        else
+        {
+            <a href="#" onclick="openCoreId()" class="btn btn-primary">Sign in</a>
+        }
+
+        <div id="login-error" style="display: none; margin-top: 15px;" class="alert alert-warning" role="alert"></div>
+    </div>
+    <div class="card-footer text-muted">
+        <p class="card-text">This sample is only configured to show BankID, change LoginViewModel and AuthTokenService to enable more identity providers.</p>
+    </div>
+</div>

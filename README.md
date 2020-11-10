@@ -1,2 +1,2 @@
-# Template README
-Please fill it with important information for the created repository
+# Assently Examples
+This repository contains public examples for Assently CoreID. Examples for Assently E-Sign will be added here later.
