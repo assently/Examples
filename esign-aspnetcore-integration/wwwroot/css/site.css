@@ -1,0 +1,208 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+.label-style {
+    text-align: left;
+}
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.border-top-dotted {
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: #ffffff;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+
+.assently-contrainer-green {
+    background: #7eac00;
+    background: linear-gradient(90deg, #7eac00 0%, #97be2d 100%);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    width: 100%;
+    overflow: scroll;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.assently-logo {
+    max-width: 350px;
+    padding-bottom: 10px;
+}
+
+.assently-h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.assently-h3 {
+    color: #ffffff;
+    text-align: center;
+}
+
+span {
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.assently-description {
+    color: #ffffff;
+    text-align: center;
+}
+
+.assently-a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.assently-a:hover {
+    color: #ffffff;
+}
+
+.assently-a:visited {
+    color: #ffffff;
+}
+
+.assently-a:focus {
+    color: #ffffff;
+}
+
+.assently-button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #7eac00;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.assently-button:active {
+    background-color: #7eac00;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+}
+
+.assently-button:hover {
+    background-color: #bbd666;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+}
+
+.assently-button:focus {
+    background-color: #bbd666;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+}
+
+.assently-button:active {
+    background-color: #bbd666;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+}
+
+.justify-content-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+input[type="radio"] {
+    margin: 0 10px 0 10px;
+}
+
+input[type="checkbox"] {
+    margin: 0 10px 0 10px;
+}
+
+.result-formatting {
+    max-height: 300px;
+    overflow: auto;
+    padding: 10px;
+    margin: 0px;
+}
+
+.custom-scrollbar {
+    width: auto;
+    height: 32em;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
