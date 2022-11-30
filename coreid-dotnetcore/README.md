@@ -24,4 +24,8 @@ Start by updating config values in appsettings.Development.json, with your crede
 Application is configured for Swedish BankID by default. 
 To enable **different eID-providers** make changes to `LoginViewModel.cs`, and the `aud` claims in `AuthorizationRequestTokenService.cs`.
 
+Implement the mapping function in AuthenticationController
+
+    private string MapTokenToIdentifier(JwtSecurityToken identityToken)
+
 _For demonstration purposes only. Do not use as a template for your own app._

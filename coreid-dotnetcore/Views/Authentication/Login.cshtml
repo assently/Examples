@@ -24,9 +24,10 @@
     function openCoreId(){
          coreid_client.init({
             config: {
-                allowedEids: ['@string.Join("','", Model.AllowedIdProviders)'],  
+                allowedEids: ['@Html.Raw(string.Join("','", Model.AllowedIdProviders))'],  
                 mode: '@Model.Mode',       
                 language: '@Model.Language',    
+                location: '@Model.DefaultLocation',
                 provider: '@Model.DefaultProvider'
             },
             token: '@Model.Token',

@@ -38,7 +38,10 @@ namespace Assently.Samples.DotnetCore.Services
                 new Claim("hst", _host), //Has to match host of where the CoreID Client is being loaded.
                 new Claim("iat", issuedAt.ToString()),
                 
-                new Claim("aud", Aud.SeBankId), // Add every provider you accept
+                new Claim("aud", Provider.SeBankId), // Add every provider you accept
+                new Claim("aud", Provider.DkMitId), // Add every provider you accept
+                new Claim("aud", Provider.FiTupas), // Add every provider you accept
+                new Claim("aud", Provider.NoBankIdOidc), // Add every provider you accept
                 new Claim("response_mode", "form_post"), //Applies to providers using redirect
                 new Claim("redirect_uri", "https://localhost:5001/Authentication/OidcReturn") //Applies to providers using redirect
             };
