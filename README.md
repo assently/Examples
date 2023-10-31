@@ -1,2 +1,2 @@
 # Assently Examples
-This repository contains public examples for Assently CoreID. Examples for Assently E-Sign will be added here later.
+This repository contains example integrations of Assently CoreID and Assently E-Sign.
