@@ -5,7 +5,7 @@ export class AssentlyTokenUserFlow {
     private static secret = process.env.ASSENTLY_SECRET! // secret provided by assently, used to sign request token
     private static identityKey = process.env.ASSENTLY_IDENTITY_KEY! // secret identity key by assently, used to validate response
     private static issuer = process.env.ASSENTLY_ISSUER! // issuer provided by assently usually your company or name
-    private static domain_name = process.env.ASSENTLY_DOMAIN_NAME! // your personal identifier, during testing use "Test av Mobilt BankID"
+    private static domain_name = process.env.ASSENTLY_CUSTOM_DISPLAY_NAME! // your personal identifier, during testing use "Test av Mobilt BankID" of Swedish BankID
     private static assently_url = process.env.ASSENTLY_COREID_URL! // coreid-test.assently.com or the production base url that assently client script uses
 
     /**
